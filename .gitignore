@@ -1,0 +1,24 @@
+# LaTeX intermediate files
+*.aux
+*.bbl
+*.blg
+*.brf
+*.fls
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.nav
+*.snm
+*.synctex.gz
+*.fdb_latexmk
+
+# Other temporary files
+*.gz
+*.idx
+*.ilg
+*.ind
+
+# Editor specific (e.g., VS Code)
+.vscode/

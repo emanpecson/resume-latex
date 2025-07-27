@@ -1,0 +1,39 @@
+
+\documentclass[a4paper,10pt]{article}
+\usepackage[margin=0.7in]{geometry}
+\usepackage{enumitem} % control list indentation, spacing between items, etc.
+\usepackage{titlesec} % customize section titles
+\usepackage{hyperref} % href
+\usepackage{parskip} % control paragraph separation
+\pagenumbering{gobble}
+
+\titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Huge Emanuel Pecson} \\
+    \href{mailto:emanpecson@gmail.com}{emanpecson@gmail.com} • (702) 609-4433 • Las Vegas, NV \\
+    \href{https://emanpecson.com}{emanpecson.com}
+\end{center}
+
+\vspace{0.5em}
+
+\section*{Experience}
+\input{sections/experience-jt4.tex}
+\input{sections/experience-ga.tex}
+\input{sections/experience-ccpw.tex}
+
+\section*{Projects}
+\input{sections/project-hoop-archives.tex}
+\input{sections/project-nba-metrics.tex}
+
+\section*{Skills}
+\input{sections/skills.tex}
+
+\section*{Education}
+\textbf{University of Nevada, Las Vegas} \\
+B.S. Computer Science — \textit{Cum Laude}, GPA: 3.86/4.00 \\
+08/2020 – 12/2024, Las Vegas, NV
+
+\end{document}
