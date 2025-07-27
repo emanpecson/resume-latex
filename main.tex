@@ -1,11 +1,15 @@
 
-\documentclass[a4paper,10pt]{article}
-\usepackage[margin=0.7in]{geometry}
+\documentclass[letterpaper,10pt]{article}
+\usepackage[margin=0.35in]{geometry}
 \usepackage{enumitem} % control list indentation, spacing between items, etc.
 \usepackage{titlesec} % customize section titles
-\usepackage{hyperref} % href
+\usepackage[hidelinks]{hyperref} % href
 \usepackage{parskip} % control paragraph separation
 \pagenumbering{gobble}
+
+% font options
+\usepackage[light,regular,bold]{roboto}
+\renewcommand{\familydefault}{\sfdefault}
 
 \titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
 
@@ -33,7 +37,7 @@
 
 \section*{Education}
 \textbf{University of Nevada, Las Vegas} \\
-B.S. Computer Science — \textit{Cum Laude}, GPA: 3.86/4.00 \\
+B.S. Computer Science — \textnormal{Cum Laude}, GPA: 3.86/4.00 \\
 08/2020 – 12/2024, Las Vegas, NV
 
 \end{document}
