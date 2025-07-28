@@ -2,42 +2,67 @@
 \documentclass[letterpaper,10pt]{article}
 \usepackage[margin=0.35in]{geometry}
 \usepackage{enumitem} % control list indentation, spacing between items, etc.
-\usepackage{titlesec} % customize section titles
+\usepackage{titlesec} % customize section titles (titleformat)
 \usepackage[hidelinks]{hyperref} % href
+\usepackage{xcolor} % custom coloring
 \usepackage{parskip} % control paragraph separation
 \pagenumbering{gobble}
 
-% font options
-\usepackage[light,regular,bold]{roboto}
+% font options (roboto)
+\usepackage[light,regular,medium]{roboto}
 \renewcommand{\familydefault}{\sfdefault}
 
-\titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
+% override \section
+\titleformat{\section}{\fontsize{12}{12}\robotomedium}{}{0em}{}[\titlerule]
+
+% macro: customhref{href}{text}
+\newcommand{\customhref}[2]{%
+  \href{#1}{{\robotoregular\fontsize{10}{12}\selectfont\color[HTML]{4B88E9}\textit{#2}}}%
+}
+% ex: \customhref{https://emanpecson.com}{emanpecson.com}
+
+% ----------------------------------------------------------- %
 
 \begin{document}
 
+% \begin{center}
+%     {\fontsize{20}{20}\robotoregular Emanuel Pecson} \\
+%     \customhref{mailto:emanpecson@gmail.com}{emanpecson@gmail.com} • 
+% 		(702) 609-4433 • Las Vegas, NV •
+%     \customhref{https://emanpecson.com}{emanpecson.com}
+% \end{center}
+
 \begin{center}
-    \textbf{\Huge Emanuel Pecson} \\
-    \href{mailto:emanpecson@gmail.com}{emanpecson@gmail.com} • (702) 609-4433 • Las Vegas, NV \\
-    \href{https://emanpecson.com}{emanpecson.com}
+  {\fontsize{20}{20}\robotoregular Emanuel Pecson} \\
+
+  \customhref{mailto:emanpecson@gmail.com}{emanpecson@gmail.com}
+	\hspace{0.75em}•\hspace{0.6em}
+	(702) 609-4433
+	\hspace{0.6em}•\hspace{0.6em}
+	Las Vegas, NV
+	\hspace{0.6em}•\hspace{0.6em}
+	\customhref{https://emanpecson.com}{emanpecson.com}	
 \end{center}
 
 \vspace{0.5em}
 
-\section*{Experience}
+\section*{EXPERIENCE}
 \input{sections/experience-jt4.tex}
 \input{sections/experience-ga.tex}
 \input{sections/experience-ccpw.tex}
 
-\section*{Projects}
+\section*{PROJECTS}
 \input{sections/project-hoop-archives.tex}
 \input{sections/project-nba-metrics.tex}
 
-\section*{Skills}
+\section*{SKILLS}
 \input{sections/skills.tex}
 
-\section*{Education}
+\section*{EDUCATION}
 \textbf{University of Nevada, Las Vegas} \\
 B.S. Computer Science — \textnormal{Cum Laude}, GPA: 3.86/4.00 \\
 08/2020 – 12/2024, Las Vegas, NV
 
 \end{document}
+
+% ----------------------------------------------------------- %
