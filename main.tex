@@ -12,8 +12,8 @@
 \usepackage[light,regular,medium]{roboto}
 \renewcommand{\familydefault}{\sfdefault}
 
-% override \section
-\titleformat{\section}{\fontsize{12}{12}\robotomedium}{}{0em}{}[\titlerule]
+% override: `\section`
+\titleformat{\section}{\fontsize{12}{12}\robotomedium\color[HTML]{434343}}{}{0em}{}[\titlerule]
 
 % macro: customhref{href}{text}
 \newcommand{\customhref}[2]{%
@@ -25,23 +25,19 @@
 
 \begin{document}
 
-% \begin{center}
-%     {\fontsize{20}{20}\robotoregular Emanuel Pecson} \\
-%     \customhref{mailto:emanpecson@gmail.com}{emanpecson@gmail.com} • 
-% 		(702) 609-4433 • Las Vegas, NV •
-%     \customhref{https://emanpecson.com}{emanpecson.com}
-% \end{center}
-
 \begin{center}
   {\fontsize{20}{20}\robotoregular Emanuel Pecson} \\
 
-  \customhref{mailto:emanpecson@gmail.com}{emanpecson@gmail.com}
-	\hspace{0.75em}•\hspace{0.6em}
+	\vspace{0.5em}
+
+	\customhref{https://emanpecson.com}{emanpecson.com}	
+	\hspace{0.6em}•\hspace{0.6em}
+  % \customhref{mailto:emanpecson@gmail.com}{emanpecson@gmail.com}
+	emanpecson@gmail.com
+	\hspace{0.6em}•\hspace{0.6em}
 	(702) 609-4433
 	\hspace{0.6em}•\hspace{0.6em}
 	Las Vegas, NV
-	\hspace{0.6em}•\hspace{0.6em}
-	\customhref{https://emanpecson.com}{emanpecson.com}	
 \end{center}
 
 \vspace{0.5em}
