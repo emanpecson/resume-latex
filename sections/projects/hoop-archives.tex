@@ -1,8 +1,20 @@
 
-\textbf{Hoop Archives} — Next.js, Java, AWS, FFmpeg \\
-\href{https://emanpecson.com/projects/hoop-archives}{emanpecson.com/projects/hoop-archives}
-\begin{itemize}[leftmargin=*, nosep]
-  \item Engineered a video editor to convert raw basketball footage into streamable AWS S3 highlights.
-  \item Architected a Java-based FFmpeg processing microservice on AWS Lambda.
-  \item Integrated Auth.js with AWS Cognito and Google IdP for secure access control.
-\end{itemize}
+\projheader
+{Hoop Archives}
+{Next.js, Java, AWS (S3, DynamoDB, Lambda, SQS), FFmpeg}
+{https://emanpecson.com/projects/hoop-archives}
+{emanpecson.com/projects/hoop-archives}
+
+\begin{bullets}
+	% #aws #s3
+	\item Engineered a video editor app that simplifies converting raw basketball footage into highlight clips stored in \reg{AWS S3}, enabling users to stream plays and filter by player, dunks, 3-pointers, ankle breakers, and more
+
+	% #aws #lambda #java #ffmpeg #architecture
+	\item Architected a video processing microservice using \reg{Java} and \reg{AWS Lambda} to handle compute-intensive tasks with \reg{FFmpeg}
+
+	% #aws #cognito #auth #authjs #googleidp #security
+	\item Integrated \reg{Auth.js} with \reg{AWS Cognito} and a \reg{Google IdP} to enable secure access control across protected routes and APIs
+	
+	% #aws #cdk
+	% \item Something here about cdk
+\end{bullets}

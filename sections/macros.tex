@@ -1,18 +1,32 @@
+
 % \customhref{<href>}{<text>}
-\newcommand{\customhref}[2]{
-  \href{#1}{{\fontsize{10}{12}\robotoregular\color[HTML]{4B88E9}\textit{#2}}}
+\newcommand{\customhref}[2]{%
+  \href{#1}{{\fontsize{10}{12}\robotoregular\color[HTML]{4B88E9}\textit{#2}}}%
 }
 
 % \expheader{<company>}{<city>}
-\newcommand{\expheader}[2]{
-  {\fontsize{11}{11}\robotomedium #1}
-  \hfill {\robotolight #2} \\
+\newcommand{\expheader}[2]{%
+  {\fontsize{11}{11}\robotomedium #1}%
+  \hfill%
+	{\robotolight #2} \\%
 }
 
 % \expsubheader{<position>}{<date>}
-\newcommand{\expsubheader}[2]{
-  {\robotoregular #1}
-  \hfill {\robotolight #2}
+\newcommand{\expsubheader}[2]{%
+  {\robotoregular #1}%
+  \hfill%
+	{\robotolight #2}%
+}
+
+% \projheader{<project>}{<tech>}{<href>}{<text>}
+\newcommand{\projheader}[4]{%
+	{\fontsize{11}{11}\robotomedium #1}%
+		\hspace{0.5em}%
+		\raisebox{0.15ex}{\fontsize{10}{10}\robotoregular \textbar}%
+		\hspace{0.5em}%
+	{\fontsize{10}{10}\robotolight #2}%
+  \hfill%
+	{\customhref{#3}{#4}}%
 }
 
 % \reg{<text>}
@@ -25,21 +39,21 @@
 % 	\item <text>
 %		...
 % \end{bullets}
-\NewEnviron{bullets}{
-  {\robotolight
-		\spaceskip=1.1\fontdimen2\font
-		\xspaceskip=1.1\fontdimen2\font
+\NewEnviron{bullets}{%
+  {\robotolight%
+		\spaceskip=1.1\fontdimen2\font%
+		\xspaceskip=1.1\fontdimen2\font%
 
-		\vspace{-0.25em}
-		\begin{sloppypar} % more spacing flexibility
-			\begin{raggedright} % avoid stretched justification + word-breaking
-				\begin{spacing}{1.15} % item-spacing
-					\begin{itemize}[leftmargin=*, nosep, label=\raisebox{0.15ex}{\small$\bullet$}]
+		\vspace{-0.25em}%
+		\begin{sloppypar}% more spacing flexibility
+			\begin{raggedright}% avoid stretched justification + word-breaking
+				\begin{spacing}{1.15}% item-spacing
+					\begin{itemize}[leftmargin=*, nosep, label=\raisebox{0.15ex}{\small$\bullet$}]%
 						\BODY
-					\end{itemize}
-				\end{spacing}
-			\end{raggedright}
-		\end{sloppypar}
-		\vspace{-0.25em}
-  }
+					\end{itemize}%
+				\end{spacing}%
+			\end{raggedright}%
+		\end{sloppypar}%
+		\vspace{-0.25em}%
+  }%
 }
