@@ -1,0 +1,45 @@
+% \customhref{<href>}{<text>}
+\newcommand{\customhref}[2]{
+  \href{#1}{{\fontsize{10}{12}\robotoregular\color[HTML]{4B88E9}\textit{#2}}}
+}
+
+% \expheader{<company>}{<city>}
+\newcommand{\expheader}[2]{
+  {\fontsize{11}{11}\robotomedium #1}
+  \hfill {\robotolight #2} \\
+}
+
+% \expsubheader{<position>}{<date>}
+\newcommand{\expsubheader}[2]{
+  {\robotoregular #1}
+  \hfill {\robotolight #2}
+}
+
+% \reg{<text>}
+\newcommand{\reg}[1]{{\robotoregular #1}}
+
+% \abt
+\newcommand{\abt}{\raisebox{0.5ex}{\texttildelow}}
+
+% \begin{bullets}
+% 	\item <text>
+%		...
+% \end{bullets}
+\NewEnviron{bullets}{
+  {\robotolight
+		\spaceskip=1.1\fontdimen2\font
+		\xspaceskip=1.1\fontdimen2\font
+
+		\vspace{-0.25em}
+		\begin{sloppypar} % more spacing flexibility
+			\begin{raggedright} % avoid stretched justification + word-breaking
+				\begin{spacing}{1.15} % item-spacing
+					\begin{itemize}[leftmargin=*, nosep, label=\raisebox{0.15ex}{\small$\bullet$}]
+						\BODY
+					\end{itemize}
+				\end{spacing}
+			\end{raggedright}
+		\end{sloppypar}
+		\vspace{-0.25em}
+  }
+}

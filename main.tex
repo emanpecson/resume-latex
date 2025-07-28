@@ -2,24 +2,25 @@
 \documentclass[letterpaper,10pt]{article}
 \usepackage[margin=0.35in]{geometry}
 \usepackage{enumitem} % control list indentation, spacing between items, etc.
+\usepackage{setspace} % spacing
+\usepackage{environ} % for \NewEnviron macro
 \usepackage{titlesec} % customize section titles (titleformat)
 \usepackage[hidelinks]{hyperref} % href
 \usepackage{xcolor} % custom coloring
 \usepackage{parskip} % control paragraph separation
+\usepackage{textcomp}
 \pagenumbering{gobble}
 
 % font options (roboto)
 \usepackage[light,regular,medium]{roboto}
 \renewcommand{\familydefault}{\sfdefault}
 
-% override: `\section`
-\titleformat{\section}{\fontsize{12}{12}\robotomedium\color[HTML]{434343}}{}{0em}{}[\titlerule]
+% override: \section
+\titleformat{\section}{\fontsize{12}{12}\robotomedium\color[HTML]{434343}}
+	{}{0em}{}
+	[\titlerule]
 
-% macro: customhref{href}{text}
-\newcommand{\customhref}[2]{%
-  \href{#1}{{\robotoregular\fontsize{10}{12}\selectfont\color[HTML]{4B88E9}\textit{#2}}}%
-}
-% ex: \customhref{https://emanpecson.com}{emanpecson.com}
+\input{sections/macros.tex}
 
 % ----------------------------------------------------------- %
 
@@ -32,7 +33,6 @@
 
 	\customhref{https://emanpecson.com}{emanpecson.com}	
 	\hspace{0.6em}•\hspace{0.6em}
-  % \customhref{mailto:emanpecson@gmail.com}{emanpecson@gmail.com}
 	emanpecson@gmail.com
 	\hspace{0.6em}•\hspace{0.6em}
 	(702) 609-4433
@@ -40,16 +40,14 @@
 	Las Vegas, NV
 \end{center}
 
-\vspace{0.5em}
-
-\section*{EXPERIENCE}
-\input{sections/experience-jt4.tex}
-\input{sections/experience-ga.tex}
-\input{sections/experience-ccpw.tex}
+\section*{EXPERIENCE} % todo: this applies too much bottom-padding
+\input{sections/experience/jt4.tex}
+\input{sections/experience/ga.tex}
+\input{sections/experience/ccpw.tex}
 
 \section*{PROJECTS}
-\input{sections/project-hoop-archives.tex}
-\input{sections/project-nba-metrics.tex}
+\input{sections/projects/hoop-archives.tex}
+\input{sections/projects/matchup-metrics.tex}
 
 \section*{SKILLS}
 \input{sections/skills.tex}
