@@ -1,3 +1,5 @@
+*.pdf
+
 # LaTeX intermediate files
 *.aux
 *.bbl
